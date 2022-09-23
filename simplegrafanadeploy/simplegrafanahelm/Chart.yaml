@@ -1,0 +1,12 @@
+apiVersion: v2
+name: grafana
+description: A simple helm chart for using Grafana on Kubernetes
+version: "0.0.1"
+appVersion: "1.0"
+type: application
+keywords:
+  - monitoring
+  - jlcp
+maintainers:
+  - name: Bernardo Lankheet
+    email: bernardo.lankheet@jlcp.com.br
