@@ -8,9 +8,14 @@ metadata:
   namespace: {{ .Release.Name }}
 spec:
   ports:
-  - port: 80
+  - name: http
+    port: 80
     protocol: TCP
-    targetPort: 3000    
+    targetPort: 3000
+  - name: https
+    port: 443
+    protocol: TCP
+    targetPort: 3000
   selector:
     app: "grafana"
   type: ClusterIP
