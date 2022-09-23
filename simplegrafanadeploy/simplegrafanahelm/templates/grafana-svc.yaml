@@ -14,6 +14,6 @@ spec:
     nodePort: 32000
   selector:
     app: "grafana"
-  type: NodePort
+  type: clusterIP
 status:
-  loadBalancer: {}
+  loadBalancer: {}  

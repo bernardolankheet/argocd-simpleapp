@@ -1,7 +1,7 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata: 
-  name: grafana-argocd
+  name: grafana
   namespace: argocd
 spec: 
   destination: 
@@ -9,7 +9,7 @@ spec:
     server: "https://kubernetes.default.svc"
   project: default
   source: 
-    path: simplegrafanahelm
+    path: simplegrafanadeploy/simplegrafanahelm
     repoURL: "https://github.com/bernardolankheet/argocd-simpleapp.git"
     targetRevision: main
   syncPolicy:
