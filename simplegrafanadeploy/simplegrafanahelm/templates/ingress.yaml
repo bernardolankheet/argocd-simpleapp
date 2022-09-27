@@ -18,7 +18,7 @@ spec:
   - host: argo.eastus2.cloudapp.azure.com
     http:
       paths:
-      - path: /grafana
+      - path: /grafana/
         pathType: Prefix
         backend:
           service:
