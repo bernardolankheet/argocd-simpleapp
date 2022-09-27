@@ -9,7 +9,7 @@ spec:
     server: "https://kubernetes.default.svc"
   project: default
   source: 
-    path: repo/private-repo-ssh
+    path: simplenginxdeploy
     repoURL: "git@github.com:bernardolankheet/argocd-simpleapp.git"
     targetRevision: main
   syncPolicy:
