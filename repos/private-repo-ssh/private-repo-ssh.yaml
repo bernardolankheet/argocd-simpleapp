@@ -1,0 +1,19 @@
+apiVersion: v1
+kind: Secret
+metadata:
+  name: simplenginx-ssh
+  namespace: argocd
+  labels:
+    argocd.argoproj.io/secret-type: repository
+stringData:
+  type: git
+  url: git@github.com:bernardolankheet/argocd-simpleapp.git
+  sshPrivateKey: |
+    -----BEGIN OPENSSH PRIVATE KEY-----
+     # key goes here  NOTE: dont push secrets into git, use sealed secrets as a solution for secrets in gitops.
+     b3BlbnNzaC1rZXktdjEAAAAABG5vbmUAAAAEbm9uZQAAAAAAAAABAAAAMwAAAAtzc2gtZW
+     QyNTUxOQAAACAeFTkOTVA9Wd+g3cYzZaRlMhDTO3hRbKs8Nj7tnotk2QAAAJCrAp8sqwKf
+     LAAAAAtzc2gtZWQyNTUxOQAAACAeFTkOTVA9Wd+g3cYzZaRlMhDTO3hRbKs8Nj7tnotk2Q
+     AAAECWLNkcV5UTJw6yocObklcDcwxTrZN+vFnoQTLc1pE6NB4VOQ5NUD1Z36DdxjNlpGUy
+     ENM7eFFsqzw2Pu2ei2TZAAAABmFyZ29jZAECAwQFBgc=
+    -----END OPENSSH PRIVATE KEY-----

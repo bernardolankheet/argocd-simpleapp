@@ -1,0 +1,17 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata: 
+  name: simplenginx-ssh
+  namespace: argocd
+spec: 
+  destination: 
+    namespace: simplenginx-ssh
+    server: "https://kubernetes.default.svc"
+  project: default
+  source: 
+    path: repo/private-repo-ssh
+    repoURL: "git@github.com:bernardolankheet/argocd-simpleapp.git"
+    targetRevision: main
+  syncPolicy:
+    syncOptions:
+      - CreateNamespace=true
