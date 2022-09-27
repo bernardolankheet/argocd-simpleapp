@@ -24,7 +24,7 @@ spec:
           service:
             name: grafana
             port:
-              name: https
+              number: 80
   tls:
   - hosts:
     - argo.eastus2.cloudapp.azure.com
