@@ -14,7 +14,7 @@ spec:
         app: webapp
     spec:
       containers:
-      - image: nginx
+      - image: nginxasdq
         name: webapp-ui
         ports:
         - containerPort: 80
